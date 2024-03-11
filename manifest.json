@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Feature Extraction",
+  "version": "1.0",
+  "permissions": ["activeTab", "tabs", "downloads", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
